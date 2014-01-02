@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Go" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <ProjectName>Speak.Service.Contrib</ProjectName>
+  </PropertyGroup>
+  
+  <Import Project="$(MSBuildProjectDirectory)\versions.targets" />
+  <Import Project="$(MSBuildProjectDirectory)\build.targets" />
+
+  <!-- Read in environment properties from environment.props if present -->
+  <Import Project="$(MSBuildProjectDirectory)\environment.props" Condition="Exists('$(MSBuildProjectDirectory)\environment.props')" />
+
+  <!-- Provide defaults for values for environment properties if environment.props is not present -->
+  <PropertyGroup>
+    <LibsSrcPath Condition="$(LibsSrcPath) == ''">C:\LibsSrc\7\7.1\130926</LibsSrcPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--<LibFiles Include="Sitecore.Kernel.dll" />
+    <LibFiles Include="Sitecore.Mvc.dll" />-->
+    
+    <!-- Indirectly referenced files -->
+    
+  </ItemGroup>
+  
+</Project>

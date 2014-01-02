@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xunit>
+  <assemblies>
+    <assembly filename="unit-test\speak.service.contrib.test\bin\release\speak.service.contrib.test.dll" shadow-copy="true" />
+  </assemblies>
+</xunit>

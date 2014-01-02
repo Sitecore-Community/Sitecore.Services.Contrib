@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Speak.Services.Contrib</id>
+    <version>0.0.0</version>
+    <authors>Kevin Obee</authors>
+    <owners>dervalp, kevinobee</owners>
+    <projectUrl>http://sitecore.net/</projectUrl> <!-- TODO -->
+    <iconUrl>http://www.sitecore.net/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Speak Services Contrib project</description>
+    <releaseNotes>Pre-release version</releaseNotes>
+    <tags>Sitecore Speak Services</tags>
+    <language>en-GB</language>
+    <dependencies>
+      <dependency id="Speak.Services" version="[0.1,0.2)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- NET 4.5 -->
+    <file src="..\..\artifacts\Build\lib\net45\Speak.Service.Contrib.dll" target="lib\net45" />
+    <file src="..\..\artifacts\Build\lib\net45\Speak.Service.Contrib.pdb" target="lib\net45" />
+  </files>
+</package>
