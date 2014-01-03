@@ -77,7 +77,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MetaData\AssemblyScannerValidationBehaviour.cs" />
     <Compile Include="MetaData\ValidationMetaDataTypeProviderBehaviour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
