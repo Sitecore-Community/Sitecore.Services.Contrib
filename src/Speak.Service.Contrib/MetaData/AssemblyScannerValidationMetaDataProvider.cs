@@ -2,62 +2,61 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Reflection;
-using System.Web.Http;
+
 using Speak.Service.Core;
+using Speak.Service.Core.Diagnostics;
+using Speak.Service.Core.MetaData;
 
 namespace Speak.Service.Contrib.MetaData
 {
-    public class AssemblyScannerValidationMetaDataProvider : Speak.Service.Core.MetaData.IValidationMetaData
+    public interface IValidationTypeProvider
     {
-        public Dictionary<string, object> Describe(ValidationAttribute attribute)
-        {
-            return new Dictionary<string, object>();
-        }
+        IEnumerable<IValidationMetaData> ValidationTypes { get; }
     }
-}
 
-namespace Speak.Service.Infrastructure.Web.Http
-{
-    public class ApiControllerTypeProvider : ITypeProvider
+    public class AssemblyScannerValidationMetaDataProvider : IValidationMetaDataProvider
     {
-        private readonly Assembly[] _assemblies;
+        private readonly ITypeProvider _typeProvider;
+        private readonly ILogger _logger;
 
-        public ApiControllerTypeProvider(Assembly[] assemblies)
+        private static IList<IValidationMetaData> _validatorHandlers;
+
+        public AssemblyScannerValidationMetaDataProvider(ITypeProvider typeProvider, ILogger logger)
         {
-            _assemblies = assemblies;
+            _typeProvider = typeProvider;
+            _logger = logger;
         }
 
-        public Type[] Types
+        public Dictionary<string, object> GetDataFor(ValidationAttribute attribute)
         {
-            get { return GetApiControllerTypes(); }
-        }
+            var attributreType = attribute.GetType();
 
-        private Type[] GetApiControllerTypes()
-        {
-            var controllers =
-                from assembly in _assemblies
-                where !assembly.IsDynamic
-                from type in GetTypesInAssembly(assembly)
-                where !type.IsAbstract
-                where !type.IsGenericTypeDefinition
-                where type.IsSubclassOf(typeof(ApiController))
-                select type;
-
-            return controllers.ToArray();
-        }
-
-        private static IEnumerable<Type> GetTypesInAssembly(Assembly assembly)
-        {
-            var noTypesFound = new Type[] { };
-
-            try
+            var handler = ValidatorHandlers.SingleOrDefault(x => x.ValidationAttributeType == attributreType);
+            if (handler == null)
             {
-                return assembly.GetTypes();
+                _logger.Warn("Missing validation handler ({0})", attributreType.FullName);
+
+                return null;
             }
-            catch (ReflectionTypeLoadException)
+
+            return handler.Describe(attribute);
+        }
+
+        protected IEnumerable<IValidationMetaData> ValidatorHandlers
+        {
+            get
             {
-                return noTypesFound;
+                if (_validatorHandlers == null)
+                {
+                    _validatorHandlers = new List<IValidationMetaData>();
+
+                    foreach (var instance in _typeProvider.Types.Select(Activator.CreateInstance))
+                    {
+                        _validatorHandlers.Add((IValidationMetaData)instance);
+                    }
+                }
+
+                return _validatorHandlers;
             }
         }
     }

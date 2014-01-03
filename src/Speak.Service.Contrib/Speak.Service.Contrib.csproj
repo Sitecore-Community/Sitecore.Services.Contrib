@@ -39,17 +39,21 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Speak.Sample">
-      <HintPath>..\..\packages\Speak.Services.0.1.0.87\lib\net45\Speak.Sample.dll</HintPath>
+    <Reference Include="Speak.Sample, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Speak.Services.0.1.0.89\lib\net45\Speak.Sample.dll</HintPath>
     </Reference>
-    <Reference Include="Speak.Service.Core">
-      <HintPath>..\..\packages\Speak.Services.0.1.0.87\lib\net45\Speak.Service.Core.dll</HintPath>
+    <Reference Include="Speak.Service.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Speak.Services.0.1.0.89\lib\net45\Speak.Service.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Speak.Service.Infrastructure">
-      <HintPath>..\..\packages\Speak.Services.0.1.0.87\lib\net45\Speak.Service.Infrastructure.dll</HintPath>
+    <Reference Include="Speak.Service.Infrastructure, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Speak.Services.0.1.0.89\lib\net45\Speak.Service.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Speak.Service.Infrastructure.Sitecore">
-      <HintPath>..\..\packages\Speak.Services.0.1.0.87\lib\net45\Speak.Service.Infrastructure.Sitecore.dll</HintPath>
+    <Reference Include="Speak.Service.Infrastructure.Sitecore, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Speak.Services.0.1.0.89\lib\net45\Speak.Service.Infrastructure.Sitecore.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -73,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MetaData\AssemblyScannerValidationMetaDataProvider.cs" />
+    <Compile Include="MetaData\ValidationMetaDataTypeProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
