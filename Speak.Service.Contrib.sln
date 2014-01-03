@@ -43,6 +43,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speak.Service.Contrib.Test"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speak.Service.Contrib", "src\Speak.Service.Contrib\Speak.Service.Contrib.csproj", "{3E4C7858-9125-4E8C-9492-1B30CCA0F861}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{4E8C7940-7A7A-48A2-85B4-A24D19A0AD63}"
+	ProjectSection(SolutionItems) = preProject
+		doc\index.md = doc\index.md
+		doc\setup.md = doc\setup.md
+		doc\who.md = doc\who.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
