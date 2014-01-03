@@ -23,14 +23,14 @@ namespace Speak.Service.Contrib.Test.MetaData
             _logger = new Mock<ILogger>();
             _typeProvider = new Mock<ITypeProvider>();
 
+            _typeProvider.SetupGet(x => x.Types).Returns(new[] { typeof(RequiredFieldMetaData) }); 
+            
             _sut = new AssemblyScannerValidationMetaDataProvider(_typeProvider.Object, _logger.Object);
         }
 
         [Fact]
         public void Should_describe_validation_attributes()
         {
-            _typeProvider.SetupGet(x => x.Types).Returns(new[] { typeof(RequiredFieldMetaData) }); 
-            
             var inputAttribute = new RequiredAttribute();
             var results = _sut.GetDataFor(inputAttribute);
 
@@ -40,7 +40,6 @@ namespace Speak.Service.Contrib.Test.MetaData
         [Fact]
         public void Calls_contained_handler_for_allowed_validation_attribute_type()
         {
-            _typeProvider.SetupGet(x => x.Types).Returns(new[] { typeof(RequiredFieldMetaData) });
             var inputAttribute = new RequiredAttribute();
             var results = _sut.GetDataFor(inputAttribute);
 
