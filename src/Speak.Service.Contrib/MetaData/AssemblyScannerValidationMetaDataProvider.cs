@@ -19,7 +19,7 @@ namespace Speak.Service.Contrib.MetaData
         private readonly ITypeProvider _typeProvider;
         private readonly ILogger _logger;
 
-        private static IList<IValidationMetaData> _validatorHandlers;
+        private IList<IValidationMetaData> _validatorHandlers;
 
         public AssemblyScannerValidationMetaDataProvider(ITypeProvider typeProvider, ILogger logger)
         {
