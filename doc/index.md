@@ -1,6 +1,6 @@
 #Speak.Service.Contrib
 
-Welcome to the SPEAK Service Contribproject.
+Welcome to the SPEAK Service Contrib project.
 
 ##Contains
 
@@ -9,4 +9,4 @@ Welcome to the SPEAK Service Contribproject.
 
 ##Collaborate
 
-Anyone can collaborate to the SPEAK Web API project, in order to do so, please read [how we are setup](setup.md) and [who is in charge](who.md).
+Anyone can collaborate to the SPEAK Service Contrib project, in order to do so, please read [how we are setup](setup.md) and [who is in charge](who.md).
