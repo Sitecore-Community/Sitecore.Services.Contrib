@@ -63,5 +63,14 @@ namespace Speak.Service.Contrib.Test.MetaData
 
             _logger.Verify(x => x.Warn(It.IsAny<string>(), It.IsAny<object[]>()), Times.Once);
         }
+
+        [Fact]
+        public void Logs_validation_metadata_handlers_loaded()
+        {
+            var inputAttribute = new StringLengthAttribute(50);
+            _sut.GetDataFor(inputAttribute);
+
+            _logger.Verify(x => x.Info("Loaded validation metadata handler ({0})", typeof(RequiredFieldMetaData).Name), Times.Once);
+        }
     }
 }

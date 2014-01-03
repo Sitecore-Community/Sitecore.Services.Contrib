@@ -52,6 +52,7 @@ namespace Speak.Service.Contrib.MetaData
 
                     foreach (var instance in _typeProvider.Types.Select(Activator.CreateInstance))
                     {
+                        _logger.Info("Loaded validation metadata handler ({0})", instance.GetType().Name);
                         _validatorHandlers.Add((IValidationMetaData)instance);
                     }
                 }
