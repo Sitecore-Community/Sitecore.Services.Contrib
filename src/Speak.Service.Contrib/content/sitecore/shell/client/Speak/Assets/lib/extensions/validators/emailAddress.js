@@ -1,0 +1,1 @@
+﻿// TODO Provide client side implementation for Speak.Service.Contrib.MetaData.EmailAddressMetaData
