@@ -20,5 +20,8 @@
     <!-- NET 4.5 -->
     <file src="..\..\artifacts\Build\lib\net45\Speak.Service.Contrib.dll" target="lib\net45" />
     <file src="..\..\artifacts\Build\lib\net45\Speak.Service.Contrib.pdb" target="lib\net45" />
+
+    <file src="..\..\src\Speak.Service.Contrib\content\**\*" target="content" />
+    
   </files>
 </package>

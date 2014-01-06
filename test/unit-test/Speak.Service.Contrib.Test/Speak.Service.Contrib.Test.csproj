@@ -80,6 +80,7 @@
     <Compile Include="MetaData\AssemblyScannerValidationBehaviour.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MetaData\EmailAddressMetaDataBehaviour.cs" />
     <Compile Include="MetaData\ValidationMetaDataTypeProviderBehaviour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
