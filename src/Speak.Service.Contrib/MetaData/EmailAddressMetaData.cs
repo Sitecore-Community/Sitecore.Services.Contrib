@@ -13,13 +13,13 @@ namespace Speak.Service.Contrib.MetaData
 
             // Emits 
             // {
-            //          "validatorName": "email",
+            //          "validatorName": "emailAddress",
             //          "errorMessage": "Invalid email address"
             // }
 
             return new Dictionary<string, object>
                 {
-                    {ValidatorName, "email"},
+                    {ValidatorName, "emailAddress"},
                     {ErrorMessage, regularExpressionAttribute.ErrorMessage}
                 };
         }

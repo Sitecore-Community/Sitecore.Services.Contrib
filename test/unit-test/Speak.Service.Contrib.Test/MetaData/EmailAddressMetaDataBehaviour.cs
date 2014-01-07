@@ -29,7 +29,7 @@ namespace Speak.Service.Contrib.Test.MetaData
         [Fact]
         public void Returns_email_as_validatorName()
         {
-            _result["validatorName"].ShouldEqual("email");
+            _result["validatorName"].ShouldEqual("emailAddress");
         }
 
         [Fact]
