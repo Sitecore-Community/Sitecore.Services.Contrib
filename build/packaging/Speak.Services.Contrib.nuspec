@@ -13,7 +13,7 @@
     <tags>Sitecore Speak Services</tags>
     <language>en-GB</language>
     <dependencies>
-      <dependency id="Speak.Services" version="[0.1.0.87,0.2)" />
+      <dependency id="Speak.Services" version="[0.1.0.102,0.2)" />
     </dependencies>
   </metadata>
   <files>

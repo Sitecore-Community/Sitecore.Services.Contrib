@@ -17,8 +17,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!--<LibFiles Include="Sitecore.Kernel.dll" />
-    <LibFiles Include="Sitecore.Mvc.dll" />-->
+    <LibFiles Include="Sitecore.Kernel.dll" />
+    <!--<LibFiles Include="Sitecore.Mvc.dll" />-->
     
     <!-- Indirectly referenced files -->
     
