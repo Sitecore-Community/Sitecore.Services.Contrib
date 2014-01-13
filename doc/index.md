@@ -10,6 +10,7 @@ Welcome to the SPEAK Service Contrib project.
 
   * EmailAddress
 
+* Generic base class for storing items in Sitecore. See Speak.Service.Contrib.Data.SitecoreItemRepository class.
 
 ##Collaborate
 
