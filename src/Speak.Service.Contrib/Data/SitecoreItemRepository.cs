@@ -82,6 +82,32 @@ namespace Speak.Service.Contrib.Data
             }
         }
 
+        public void Update(T entity)
+        {
+            using (new Sitecore.SecurityModel.SecurityDisabler())  // TODO use a UserSwitcher and switch to the Api User
+            {
+                var database = MasterDatabase;
+                var itemToUpdate = database.GetItem(new ID(entity.Id));
+
+                if (itemToUpdate == null)
+                {
+                    throw new InvalidOperationException(string.Format("Item ({0}) could not be found", entity.Id));
+                }
+
+                itemToUpdate.Editing.BeginEdit();
+                try
+                {
+                    // TODO need to update the item name from the entity...
+
+                    UpdateFields(entity, itemToUpdate);
+                }
+                finally
+                {
+                    itemToUpdate.Editing.EndEdit();
+                }
+            }
+        }
+
         protected abstract string GetItemName(T entity);
 
         protected virtual void UpdateFields(T entity, Item item)
