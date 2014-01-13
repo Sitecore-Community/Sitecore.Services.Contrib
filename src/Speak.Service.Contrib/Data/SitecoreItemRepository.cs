@@ -113,15 +113,13 @@ namespace Speak.Service.Contrib.Data
         protected virtual bool IsMatch(T entity, Item item)
         {
             // Entity.Id can be unset when creating entities, if so fallback to comparison by name 
-            if (entity.Id != Guid.NewGuid())
+            if (entity.Id != Guid.Empty)
             {
                 return ((item.TemplateID == _templateType) && (item.ID.Guid == entity.Id));
             }
-            else
-            {
-                return ((item.TemplateID == _templateType) &&
-                        (item.Name.Equals(GetItemName(entity), StringComparison.InvariantCultureIgnoreCase)));
-            }
+            
+            return ((item.TemplateID == _templateType) &&
+                    (item.Name.Equals(GetItemName(entity), StringComparison.InvariantCultureIgnoreCase)));
         }
 
         private static Database GetDatabase(string databaseName = "master")
