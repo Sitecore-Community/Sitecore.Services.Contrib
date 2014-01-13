@@ -97,7 +97,7 @@ namespace Speak.Service.Contrib.Data
                 itemToUpdate.Editing.BeginEdit();
                 try
                 {
-                    // TODO need to update the item name from the entity...
+                    UpdateItemName(entity, itemToUpdate);
 
                     UpdateFields(entity, itemToUpdate);
                 }
@@ -106,6 +106,16 @@ namespace Speak.Service.Contrib.Data
                     itemToUpdate.Editing.EndEdit();
                 }
             }
+        }
+
+        private void UpdateItemName(T entity, Item item)
+        {
+            var itemName = GetItemName(entity);
+
+            var currentName = (string) entity.GetType().GetProperty(itemName).GetValue(entity, null);
+            if (currentName != null && item.Name == currentName) return;
+
+            item.Name = currentName;
         }
 
         protected abstract string GetItemName(T entity);
