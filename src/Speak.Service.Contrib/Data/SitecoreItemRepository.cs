@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Reflection;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 
@@ -110,12 +110,11 @@ namespace Speak.Service.Contrib.Data
 
         private void UpdateItemName(T entity, Item item)
         {
-            var itemName = GetItemName(entity);
+            var entityName = GetItemName(entity);
 
-            var currentName = (string) entity.GetType().GetProperty(itemName).GetValue(entity, null);
-            if (currentName != null && item.Name == currentName) return;
+            if (!string.IsNullOrEmpty(entityName) && item.Name == entityName) return;
 
-            item.Name = currentName;
+            item.Name = entityName;
         }
 
         protected abstract string GetItemName(T entity);
