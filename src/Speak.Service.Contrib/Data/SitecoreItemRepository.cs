@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
+
 using Sitecore.Data;
+using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 
 using Speak.Service.Core;
@@ -160,6 +161,22 @@ namespace Speak.Service.Contrib.Data
         private static Database GetDatabase(string databaseName = "master")
         {
             return Sitecore.Configuration.Factory.GetDatabase(databaseName);
+        }
+
+        protected void UpdateItemListField(Field field, ICollection<Guid> itemIDs)
+        {
+            MultilistField multilistField = field;
+            if (multilistField == null) return;
+
+            foreach (var id in multilistField.TargetIDs.Where(id => !itemIDs.Contains(id.Guid)))
+            {
+                multilistField.Remove(id.ToString());
+            }
+
+            foreach (var id in itemIDs.Select(x => new ID(x)).Where(id => !multilistField.TargetIDs.Contains(id)))
+            {
+                multilistField.Add(id.ToString());
+            }
         }
     }
 }
