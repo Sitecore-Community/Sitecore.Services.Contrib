@@ -168,14 +168,24 @@ namespace Speak.Service.Contrib.Data
             MultilistField multilistField = field;
             if (multilistField == null) return;
 
-            foreach (var id in multilistField.TargetIDs.Where(id => !itemIDs.Contains(id.Guid)))
+            if (itemIDs == null)
             {
-                multilistField.Remove(id.ToString());
+                foreach (var id in multilistField.TargetIDs)
+                {
+                    multilistField.Remove(id.ToString());
+                }
             }
-
-            foreach (var id in itemIDs.Select(x => new ID(x)).Where(id => !multilistField.TargetIDs.Contains(id)))
+            else
             {
-                multilistField.Add(id.ToString());
+                foreach (var id in multilistField.TargetIDs.Where(id => !itemIDs.Contains(id.Guid)))
+                {
+                    multilistField.Remove(id.ToString());
+                }
+
+                foreach (var id in itemIDs.Select(x => new ID(x)).Where(id => !multilistField.TargetIDs.Contains(id)))
+                {
+                    multilistField.Add(id.ToString());
+                }                
             }
         }
     }
