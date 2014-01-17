@@ -7,6 +7,7 @@ using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 
 using Speak.Service.Core;
+using Speak.Service.Core.Model;
 
 namespace Speak.Service.Contrib.Data
 {
@@ -28,7 +29,7 @@ namespace Speak.Service.Contrib.Data
             get { return GetDatabase(); }
         }
 
-        public T FindById(Guid id)
+        public T FindById(string id)
         {
             var item = MasterDatabase.GetItem(new ID(id));
 
@@ -79,7 +80,7 @@ namespace Speak.Service.Contrib.Data
                 }
 
                 // Ensure that the entity contains the identity of the newly created post
-                entity.Id = newPost.ID.Guid;
+                entity.Id = newPost.ID.Guid.ToString();
             }
         }
 
@@ -149,9 +150,10 @@ namespace Speak.Service.Contrib.Data
         protected virtual bool IsMatch(T entity, Item item)
         {
             // Entity.Id can be unset when creating entities, if so fallback to comparison by name 
-            if (entity.Id != Guid.Empty)
+            if (entity.HasIdentity())
             {
-                return ((item.TemplateID == _templateType) && (item.ID.Guid == entity.Id));
+                return ((item.TemplateID == _templateType) && 
+                        (item.ID.Guid.ToString().Equals(entity.Id, StringComparison.InvariantCultureIgnoreCase)));
             }
             
             return ((item.TemplateID == _templateType) &&
