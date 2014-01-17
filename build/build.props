@@ -27,7 +27,7 @@
     <PrereleaseTagWithSeparator Condition="$(PRERELEASE) != ''">.$([System.DateTime]::Now.ToString("yyMMdd"))</PrereleaseTagWithSeparator>
     <Version>$(MajorVersion).$(MinorVersion).$(PatchVersion)</Version>
     <FileVersion>$(MajorVersion).$(MinorVersion).$(BuildDate).$(Revision)</FileVersion>
-    <PackageVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion)$(PrereleaseTagWithSeparator)</PackageVersion>
+    <PackageVersion Condition="$(PackageVersion) == ''" >$(MajorVersion).$(MinorVersion).$(PatchVersion)$(PrereleaseTagWithSeparator)</PackageVersion>
   </PropertyGroup>
 
 </Project>
