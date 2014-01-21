@@ -15,13 +15,11 @@ namespace Speak.Service.Contrib.Data
     {
         private readonly ID _rootItem;
         private readonly ID _templateType;
-        private readonly Func<Item, T> _createModelFromItem;
 
-        protected SitecoreItemRepository(ID rootItem, ID templateType, Func<Item, T> createModelFromItem)
+        protected SitecoreItemRepository(ID rootItem, ID templateType)
         {
             _rootItem = rootItem;
             _templateType = templateType;
-            _createModelFromItem = createModelFromItem;
         }
 
         protected static Database MasterDatabase
@@ -35,8 +33,10 @@ namespace Speak.Service.Contrib.Data
 
             if (item == null) return default(T);
 
-            return _createModelFromItem.Invoke(item);
+            return CreateModelFrom(item);
         }
+
+        protected abstract T CreateModelFrom(Item item);
 
         public IQueryable<T> GetAll()
         {
@@ -47,7 +47,7 @@ namespace Speak.Service.Contrib.Data
             if (parentItem != null)
             {
                 var items = parentItem.Axes.GetDescendants().Where(x => x.TemplateID == _templateType);
-                results.AddRange(items.Select(_createModelFromItem.Invoke));
+                results.AddRange(items.Select(CreateModelFrom));
             }
 
             return results.AsQueryable();
