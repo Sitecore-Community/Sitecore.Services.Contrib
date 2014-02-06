@@ -41,15 +41,15 @@
     </Reference>
     <Reference Include="Speak.Service.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Speak.Services.0.1.0.105\lib\net45\Speak.Service.Core.dll</HintPath>
+      <HintPath>..\..\..\packages\Speak.Services.0.1.0.133\lib\net45\Speak.Service.Core.dll</HintPath>
     </Reference>
     <Reference Include="Speak.Service.Infrastructure, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Speak.Services.0.1.0.105\lib\net45\Speak.Service.Infrastructure.dll</HintPath>
+      <HintPath>..\..\..\packages\Speak.Services.0.1.0.133\lib\net45\Speak.Service.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Speak.Service.Infrastructure.Sitecore, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Speak.Services.0.1.0.105\lib\net45\Speak.Service.Infrastructure.Sitecore.dll</HintPath>
+      <HintPath>..\..\..\packages\Speak.Services.0.1.0.133\lib\net45\Speak.Service.Infrastructure.Sitecore.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
