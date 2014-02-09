@@ -21,7 +21,7 @@ namespace Speak.Service.Contrib.Test.MetaData
         }
 
         [Fact]
-        public void MetaData_provided_for_RegularExpressionAttribute()
+        public void MetaData_provided_for_EmailAddressAttribute()
         {
             _sut.ValidationAttributeType.ShouldEqual(typeof(EmailAddressAttribute));
         }
