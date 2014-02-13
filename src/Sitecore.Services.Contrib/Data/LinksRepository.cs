@@ -3,7 +3,7 @@ using System.Linq;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 
-namespace Speak.Service.Contrib.Data
+namespace Sitecore.Services.Contrib.Data
 {
     public class LinksRepository : ILinksRepository
     {

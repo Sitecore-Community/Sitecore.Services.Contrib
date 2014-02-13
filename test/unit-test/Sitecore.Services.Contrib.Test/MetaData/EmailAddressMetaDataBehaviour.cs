@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-
+using Sitecore.Services.Contrib.MetaData;
 using Sitecore.Services.Core.MetaData;
-using Speak.Service.Contrib.MetaData;
-
 using Should;
 using Xunit;
 
-namespace Speak.Service.Contrib.Test.MetaData
+namespace Sitecore.Services.Contrib.Test.MetaData
 {
     public class EmailAddressMetaDataBehaviour
     {

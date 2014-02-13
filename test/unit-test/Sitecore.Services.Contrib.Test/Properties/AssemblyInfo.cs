@@ -1,15 +1,14 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Speak.Service.Contrib")]
+[assembly: AssemblyTitle("Sitecore.Services.Contrib.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Speak.Service.Contrib")]
+[assembly: AssemblyProduct("Sitecore.Services.Contrib.Test")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("239e8f36-258e-4b54-85a1-65335256433d")]
+[assembly: Guid("29479f93-e8ce-4901-af0a-e917264e030f")]
 
 // Version information for an assembly consists of the following four values:
 //

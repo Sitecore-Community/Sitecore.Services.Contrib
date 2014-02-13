@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Services.Core;
 using Sitecore.Services.Core.Model;
 
-namespace Speak.Service.Contrib.Data
+namespace Sitecore.Services.Contrib.Data
 {
     public abstract class SitecoreItemRepository<T> : IRepository<T> where T : EntityIdentity
     {

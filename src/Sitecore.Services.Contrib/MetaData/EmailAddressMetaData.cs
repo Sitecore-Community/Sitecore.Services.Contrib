@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Sitecore.Services.Core.MetaData;
 
-namespace Speak.Service.Contrib.MetaData
+namespace Sitecore.Services.Contrib.MetaData
 {
     public class EmailAddressMetaData : ValidationMetaDataBase
     {

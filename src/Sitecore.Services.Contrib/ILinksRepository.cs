@@ -2,7 +2,7 @@
 using Sitecore.Data;
 using Sitecore.Data.Items;
 
-namespace Speak.Service.Contrib
+namespace Sitecore.Services.Contrib
 {
     public interface ILinksRepository
     {
