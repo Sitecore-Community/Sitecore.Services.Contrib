@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Speak.Service.Core.MetaData;
+using Sitecore.Services.Core.MetaData;
 
 namespace Speak.Service.Contrib.MetaData
 {

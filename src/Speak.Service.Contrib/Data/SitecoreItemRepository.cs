@@ -5,9 +5,8 @@ using System.Linq;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
-
-using Speak.Service.Core;
-using Speak.Service.Core.Model;
+using Sitecore.Services.Core;
+using Sitecore.Services.Core.Model;
 
 namespace Speak.Service.Contrib.Data
 {

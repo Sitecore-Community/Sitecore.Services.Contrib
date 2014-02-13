@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Should;
+
+using Sitecore.Services.Core.MetaData;
 using Speak.Service.Contrib.MetaData;
+
+using Should;
 using Xunit;
-using Speak.Service.Core.MetaData;
 
 namespace Speak.Service.Contrib.Test.MetaData
 {
@@ -21,7 +23,7 @@ namespace Speak.Service.Contrib.Test.MetaData
         }
 
         [Fact]
-        public void MetaData_provided_for_RegularExpressionAttribute()
+        public void MetaData_provided_for_EmailAddressAttribute()
         {
             _sut.ValidationAttributeType.ShouldEqual(typeof(EmailAddressAttribute));
         }

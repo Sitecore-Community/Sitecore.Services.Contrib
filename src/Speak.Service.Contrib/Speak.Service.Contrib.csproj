@@ -77,9 +77,7 @@
     <Compile Include="Data\LinksRepository.cs" />
     <Compile Include="Data\SitecoreItemRepository.cs" />
     <Compile Include="ILinksRepository.cs" />
-    <Compile Include="MetaData\AssemblyScannerValidationMetaDataProvider.cs" />
     <Compile Include="MetaData\EmailAddressMetaData.cs" />
-    <Compile Include="MetaData\ValidationMetaDataTypeProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
