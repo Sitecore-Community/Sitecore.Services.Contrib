@@ -35,14 +35,17 @@
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\lib\Sitecore.Kernel.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Services.Core">
-      <HintPath>..\..\packages\Sitecore.Services.0.2.0.1\lib\net45\Sitecore.Services.Core.dll</HintPath>
+    <Reference Include="Sitecore.Services.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\speak.service.contrib\packages\Sitecore.Services.0.2.0.135\lib\net45\Sitecore.Services.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Services.Infrastructure">
-      <HintPath>..\..\packages\Sitecore.Services.0.2.0.1\lib\net45\Sitecore.Services.Infrastructure.dll</HintPath>
+    <Reference Include="Sitecore.Services.Infrastructure, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\speak.service.contrib\packages\Sitecore.Services.0.2.0.135\lib\net45\Sitecore.Services.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Services.Infrastructure.Sitecore">
-      <HintPath>..\..\packages\Sitecore.Services.0.2.0.1\lib\net45\Sitecore.Services.Infrastructure.Sitecore.dll</HintPath>
+    <Reference Include="Sitecore.Services.Infrastructure.Sitecore, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\speak.service.contrib\packages\Sitecore.Services.0.2.0.135\lib\net45\Sitecore.Services.Infrastructure.Sitecore.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
