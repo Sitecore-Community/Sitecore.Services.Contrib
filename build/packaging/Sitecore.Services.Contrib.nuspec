@@ -13,7 +13,7 @@
     <tags>Sitecore Services Contrib</tags>
     <language>en-GB</language>
     <dependencies>
-      <dependency id="Sitecore.Services" version="0.2.0.1" />
+      <dependency id="Sitecore.Services" version="0.2.0.140" />
     </dependencies>
   </metadata>
   <files>

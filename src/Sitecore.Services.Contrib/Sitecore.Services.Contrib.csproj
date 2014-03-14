@@ -44,15 +44,15 @@
     </Reference>
     <Reference Include="Sitecore.Services.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Sitecore.Services.0.2.0.16\lib\net45\Sitecore.Services.Core.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Services.0.2.0.135\lib\net45\Sitecore.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Services.Infrastructure, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Sitecore.Services.0.2.0.16\lib\net45\Sitecore.Services.Infrastructure.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Services.0.2.0.135\lib\net45\Sitecore.Services.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Services.Infrastructure.Sitecore, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Sitecore.Services.0.2.0.16\lib\net45\Sitecore.Services.Infrastructure.Sitecore.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Services.0.2.0.135\lib\net45\Sitecore.Services.Infrastructure.Sitecore.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -102,7 +102,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="content\sitecore\shell\client\Speak\Assets\lib\extensions\validators\emailAddress.js" />
+    <Content Include="content\sitecore\shell\client\Services\Assets\lib\extensions\validators\emailAddress.js" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
