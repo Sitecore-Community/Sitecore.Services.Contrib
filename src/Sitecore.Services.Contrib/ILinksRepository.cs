@@ -4,8 +4,8 @@ using Sitecore.Data.Items;
 
 namespace Sitecore.Services.Contrib
 {
-    public interface ILinksRepository
-    {
-        IEnumerable<Item> GetLinksFor(Item id, ID category);
-    }
+  public interface ILinksRepository
+  {
+    IEnumerable<Item> GetLinksFor(Item id, ID category);
+  }
 }
