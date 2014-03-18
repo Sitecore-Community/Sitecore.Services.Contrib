@@ -33,10 +33,10 @@ For more information about the build environment, please refer to the README.md 
 
 ##nuget
 
-The SPEAK Service Contrib project is released on the nuget gallery.
+The Sitecore Services Contrib project is released on the nuget gallery.
 
 ###configuration
-The package is build based on the information contained inside the `./build/packaging/Speak.Services.Contrib.nuspec`
+The package is build based on the information contained inside the `./build/packaging/Sitecore.Services.Contrib.nuspec`
 
 ###dependencies
 
@@ -50,7 +50,7 @@ This folder contains the library which are not published in nuget gallery. Ex: t
 
 #src folder
 
-    -/src|-speak.service.contrib
+    -/src|-sitecore.services.contrib
 
 
 #test folder
@@ -59,4 +59,4 @@ All the tests
 
 #doc folder
 
-All the documentation in relation of the SPEAK Service Contrib project.
+All the documentation in relation of the Sitecore Services Contrib project.

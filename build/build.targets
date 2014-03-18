@@ -106,7 +106,7 @@
   <Target Name="CopyProjectAssembliesToSite" DependsOnTargets="Build">
     <ItemGroup>
       <ProjectSrcAssemblies
-          Include="$(BuildResultsPath)\lib\net45\Speak*.dll; "
+          Include="$(BuildResultsPath)\lib\net45\Sitecore.Services.Contrib*.dll; "
           Exclude="@(LibFiles -> '$(BuildResultsPath)\lib\net45\%(Identity)')" />
     </ItemGroup>
 

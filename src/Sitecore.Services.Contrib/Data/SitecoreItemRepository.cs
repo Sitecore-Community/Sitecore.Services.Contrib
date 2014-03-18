@@ -56,29 +56,33 @@ namespace Sitecore.Services.Contrib.Data
             using (new Sitecore.SecurityModel.SecurityDisabler())  // TODO use a UserSwitcher and switch to the Api User
             {
                 var database = MasterDatabase;
-                var postsItem = database.GetItem(_rootItem);
-                var postTemplate = database.GetTemplate(_templateType);
+                var rootItem = database.GetItem(_rootItem);
+                var templateItem = database.GetTemplate(_templateType);
 
-                if ((postsItem == null) || (postTemplate == null))
+                if (rootItem == null)
                 {
-                    const string speakBlogNotInstalled = "Speak Blog not installed";
-                    throw new InvalidOperationException(speakBlogNotInstalled);
+                    throw new InvalidOperationException(string.Format("Root Item ({0}) not found", _rootItem));
                 }
 
-                var newPost = postsItem.Add(GetItemName(entity), postTemplate);
+                if (templateItem == null)
+                {
+                  throw new InvalidOperationException(string.Format("Template type ({0}) not found", _templateType));
+                }
 
-                newPost.Editing.BeginEdit();
+                var newItem = rootItem.Add(GetItemName(entity), templateItem);
+
+                newItem.Editing.BeginEdit();
                 try
                 {
-                    UpdateFields(entity, newPost);
+                    UpdateFields(entity, newItem);
                 }
                 finally
                 {
-                    newPost.Editing.EndEdit();
+                    newItem.Editing.EndEdit();
                 }
 
-                // Ensure that the entity contains the identity of the newly created post
-                entity.Id = newPost.ID.Guid.ToString();
+                // Ensure that the entity contains the identity of the newly created item
+                entity.Id = newItem.ID.Guid.ToString();
             }
         }
 

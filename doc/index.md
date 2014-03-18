@@ -1,6 +1,6 @@
-#Speak.Service.Contrib
+#Sitecore.Services.Contrib
 
-Welcome to the SPEAK Service Contrib project.
+Welcome to the Sitecore Services Contrib project.
 
 ##Contains
 
@@ -8,10 +8,10 @@ Welcome to the SPEAK Service Contrib project.
 
   * EmailAddress
 
-* Generic base class for storing items in Sitecore. See Speak.Service.Contrib.Data.SitecoreItemRepository class.
+* Generic base class for storing items in Sitecore. See Sitecore.Services.Contrib.Data.SitecoreItemRepository class.
 
-* Repository for retrieving Sitecore items linked to a specified item. See Speak.Service.Contrib.Data.LinksRepository class.
+* Repository for retrieving Sitecore items linked to a specified item. See Sitecore.Services.Contrib.Data.LinksRepository class.
 
 ##Collaborate
 
-Anyone can collaborate to the SPEAK Service Contrib project, in order to do so, please read [how we are setup](setup.md) and [who is in charge](who.md).
+Anyone can collaborate to the Sitecore Services Contrib project, in order to do so, please read [how we are setup](setup.md) and [who is in charge](who.md).
