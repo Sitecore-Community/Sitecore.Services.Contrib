@@ -5,7 +5,7 @@
     <version>0.0.0</version>
     <authors>Kevin Obee</authors>
     <owners>dervalp, kevinobee</owners>
-    <projectUrl>http://sitecore.net/</projectUrl> <!-- TODO -->
+    <projectUrl>http://sitecore.net/</projectUrl>
     <iconUrl>http://www.sitecore.net/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Sitecore Services Contrib project</description>
@@ -13,7 +13,7 @@
     <tags>Sitecore Services Contrib</tags>
     <language>en-GB</language>
     <dependencies>
-      <dependency id="Sitecore.Services" version="0.2.0.140" />
+      <dependency id="Sitecore.Services" version="0.2.0.141" />
     </dependencies>
   </metadata>
   <files>
