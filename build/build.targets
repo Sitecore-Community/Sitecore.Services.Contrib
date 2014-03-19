@@ -76,7 +76,7 @@
     </RegexTransform>
     <RegexTransform Include="$(ProjectRoot)\src\Common\CommonVersionInfo.cs">
       <Find>AssemblyInformationalVersion\("\d+\.\d+\.\d+(-\w+\d*(-\d+)?)?"\)</Find>
-      <ReplaceWith>AssemblyInformationalVersion("$(PackageVersion)")</ReplaceWith>
+      <ReplaceWith>AssemblyInformationalVersion("$(ProductVersion)")</ReplaceWith>
     </RegexTransform>
   </ItemGroup>
 

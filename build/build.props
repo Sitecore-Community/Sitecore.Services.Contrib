@@ -20,14 +20,13 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <!-- Build number is of the format (CurrentYear - VersionStartYear + 1)(2 digit month)(2 digit day) -->
-    <BuildDate>$([MSBuild]::Add(1, $([MSBuild]::Subtract($([System.DateTime]::Now.Year), $(VersionStartYear)))))$([System.DateTime]::Now.ToString("MMdd"))</BuildDate>
-    <Revision Condition="$(BUILD_NUMBER) != ''">$(BUILD_NUMBER)</Revision>
-    <Revision Condition="$(BUILD_NUMBER) == ''">0</Revision>
-    <PrereleaseTagWithSeparator Condition="$(PRERELEASE) != ''">.$([System.DateTime]::Now.ToString("yyMMdd"))</PrereleaseTagWithSeparator>
+    <!-- Build date is in the format (2 digit year)(2 digit month)(2 digit day) -->
+    <BuildDate>$([System.DateTime]::Now.ToString("yyMMdd"))</BuildDate>
+    <PrereleaseTagWithSeparator Condition="$(PRERELEASE) != ''">.$(BuildDate)</PrereleaseTagWithSeparator>
     <Version>$(MajorVersion).$(MinorVersion).$(PatchVersion)</Version>
-    <FileVersion>$(MajorVersion).$(MinorVersion).$(BuildDate).$(Revision)</FileVersion>
-    <PackageVersion Condition="$(PackageVersion) == ''" >$(MajorVersion).$(MinorVersion).$(PatchVersion)$(PrereleaseTagWithSeparator)</PackageVersion>
+    <FileVersion>$(MajorVersion).$(MinorVersion).$(Revision).$(PatchVersion)</FileVersion>
+    <ProductVersion>$(MajorVersion).$(MinorVersion) rev $(BuildDate)</ProductVersion>
+    <PackageVersion Condition="$(PackageVersion) == ''">$(MajorVersion).$(MinorVersion).$(PatchVersion).$(Revision)$(PrereleaseTagWithSeparator)</PackageVersion>
   </PropertyGroup>
 
 </Project>
