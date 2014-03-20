@@ -3,7 +3,8 @@
   <PropertyGroup>
     <MajorVersion Condition="$(MajorVersion) == ''">0</MajorVersion>
     <MinorVersion Condition="$(MinorVersion) == ''">0</MinorVersion>
-    <PatchVersion Condition="$(PatchVersion) == ''">1</PatchVersion>
+    <PatchVersion Condition="$(PatchVersion) == ''">0</PatchVersion>
+    <Revision Condition="$(Revision) == ''">0</Revision>
 
   <!-- Change PRERELEASE to an empty value or comment out the tag to prevent package names being generated with a -->
   <!-- build quality and YYMMDD suffix, eg. Sitecore.Services.0.1.0.130207.nupkg -->
