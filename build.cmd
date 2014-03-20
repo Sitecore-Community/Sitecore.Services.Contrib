@@ -1,4 +1,21 @@
 @echo Off
+
+if "%MajorVersion%" == "" (
+   set MajorVersion=0
+)
+
+if "%MinorVersion%" == "" (
+   set MinorVersion=2
+)
+
+if "%PatchVersion%" == "" (
+   set PatchVersion=0
+)
+
+if "%Revision%" == "" (
+   set Revision=0
+)
+
 set target=%1
 if "%target%" == "" (
    set target=Go
