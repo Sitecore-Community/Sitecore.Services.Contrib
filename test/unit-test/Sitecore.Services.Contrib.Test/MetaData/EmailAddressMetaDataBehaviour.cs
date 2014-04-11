@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+
 using Sitecore.Services.Contrib.MetaData;
 using Sitecore.Services.Core.MetaData;
+
 using Should;
 using Xunit;
 
@@ -11,13 +13,14 @@ namespace Sitecore.Services.Contrib.Test.MetaData
   {
     private readonly Dictionary<string, object> _result;
     private readonly IValidationMetaData _sut;
+    private const string FieldName = "MyProperty";
 
     public EmailAddressMetaDataBehaviour()
     {
       var attribute = new EmailAddressAttribute { ErrorMessage = "My message" };
 
       _sut = new EmailAddressMetaData();
-      _result = _sut.Describe(attribute);
+      _result = _sut.Describe(attribute, FieldName);
     }
 
     [Fact]
@@ -42,6 +45,17 @@ namespace Sitecore.Services.Contrib.Test.MetaData
     public void Returns_no_params()
     {
       _result.ContainsKey("param").ShouldBeFalse();
+    }
+
+    [Fact]
+    public void Returns_default_error_message_when_not_specified()
+    {
+      var attribute = new EmailAddressAttribute();
+      var metaData = new EmailAddressMetaData();
+
+      var result = metaData.Describe(attribute, FieldName);
+
+      result["errorMessage"].ShouldEqual(string.Format("The {0} field is not a valid e-mail address.", FieldName));
     }
   }
 }
