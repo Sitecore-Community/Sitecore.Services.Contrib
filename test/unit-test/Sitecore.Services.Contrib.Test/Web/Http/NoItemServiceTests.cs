@@ -14,9 +14,7 @@ namespace Sitecore.Services.Contrib.Test.Web.Http
 
     public NoItemServiceTest()
     {
-      var defaultMapper = new DefaultRouteMapper("");
-
-      Sut = new NoItemServiceRouteMapper(defaultMapper);      
+      Sut = new NoItemServiceRouteMapper("");      
     }
   }
 

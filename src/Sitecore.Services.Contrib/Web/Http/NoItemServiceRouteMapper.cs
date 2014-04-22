@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Mvc;
 using System.Web.Routing;
 
 using Sitecore.Services.Infrastructure.Sitecore.Configuration;
@@ -8,40 +9,42 @@ namespace Sitecore.Services.Contrib.Web.Http
 {
   public class NoItemServiceRouteMapper : IMapRoutes
   {
-    private readonly IMapRoutes _routeMapper;
+    private readonly string _routeBase;
 
-    public NoItemServiceRouteMapper(IMapRoutes routeMapper)
+    public NoItemServiceRouteMapper(string routeBase)
     {
-      _routeMapper = routeMapper;
+      _routeBase = routeBase;
     }
 
     /// <summary>
     /// Default constructor required to for CreateInstance in ConfigurationRouteConfigurationFactory to work
     /// </summary>
     public NoItemServiceRouteMapper()
-      : this(new DefaultRouteMapper(new ServicesSettingsConfigurationProvider().Configuration.Services.Routes.RouteBase))
+      : this(RouteBaseSetting)
     {
+    }
+
+    public static string RouteBaseSetting
+    {
+      get { return new ServicesSettingsConfigurationProvider().Configuration.Services.Routes.RouteBase;  }
     }
 
     public void MapRoutes(HttpConfiguration config)
     {
-      _routeMapper.MapRoutes(config);
-
-      config.Routes.Remove(DefaultRouteMapper.RouteName.ItemService.Children);
-      config.Routes.Remove(DefaultRouteMapper.RouteName.ItemService.ContentPath);
-      config.Routes.Remove(DefaultRouteMapper.RouteName.ItemService.Default);
-      config.Routes.Remove(DefaultRouteMapper.RouteName.ItemService.Path);
-      config.Routes.Remove(DefaultRouteMapper.RouteName.ItemService.Query);
-      config.Routes.Remove(DefaultRouteMapper.RouteName.ItemService.QueryViaItem);
-      config.Routes.Remove(DefaultRouteMapper.RouteName.ItemService.Search);
-      config.Routes.Remove(DefaultRouteMapper.RouteName.ItemService.SearchViaItem);
+      config.Routes.MapHttpRoute(
+          DefaultRouteMapper.RouteName.EntityService.IdAction,
+          _routeBase + "{namespace}/{controller}/{id}/{action}",
+          defaults: new { id = RouteParameter.Optional, action = "DefaultAction" }
+          );
     }
 
     public void MapRoutes(RouteCollection routes)
     {
-      _routeMapper.MapRoutes(routes);
-
-      routes.Remove(routes[DefaultRouteMapper.RouteName.Authentication]);
+      routes.MapRoute(
+          name: DefaultRouteMapper.RouteName.EntityService.MetaDataScript,
+          url: _routeBase + "script/metadata",
+          defaults: new { controller = "MetaDataScript", action = "GetScripts" },
+          namespaces: new[] { "Sitecore.Services.Infrastructure.Sitecore.Mvc" });
     }
   }
 }
