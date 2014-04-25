@@ -115,6 +115,7 @@
     <Compile Include="MetaData\EmailAddressMetaDataBehaviour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\Http\NoItemServiceTests.cs" />
+    <Compile Include="Web\Http\Security\NoItemServicePolicyBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

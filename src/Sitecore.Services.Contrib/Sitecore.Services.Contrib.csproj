@@ -118,6 +118,7 @@
     <Compile Include="MetaData\EmailAddressMetaData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\Http\NoItemServiceRouteMapper.cs" />
+    <Compile Include="Web\Http\Security\NoItemServicePolicy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="content\sitecore\shell\client\Services\Assets\lib\extensions\validators\emailAddress.js" />

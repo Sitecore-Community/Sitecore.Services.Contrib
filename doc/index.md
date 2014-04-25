@@ -8,9 +8,12 @@ Welcome to the Sitecore Services Contrib project.
 
   * EmailAddress
 
+
 * Generic base class for storing items in Sitecore. See Sitecore.Services.Contrib.Data.SitecoreItemRepository class.
 
 * Repository for retrieving Sitecore items linked to a specified item. See Sitecore.Services.Contrib.Data.LinksRepository class.
+
+* Custom security policy to disallow HTTP requests to the Item Service.
 
 ##Collaborate
 
