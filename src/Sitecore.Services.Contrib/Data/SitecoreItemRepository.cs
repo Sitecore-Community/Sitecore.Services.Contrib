@@ -53,7 +53,10 @@ namespace Sitecore.Services.Contrib.Data
 
     public void Add(T entity)
     {
-      using (new Sitecore.SecurityModel.SecurityDisabler())  // TODO use a UserSwitcher and switch to the Api User
+      // Dev. Note: Better to use the UserSwitcher if the request is unauthenticated 
+      //            and switch to the API User.
+
+      using (new SecurityModel.SecurityDisabler())
       {
         var database = MasterDatabase;
         var rootItem = database.GetItem(_rootItem);
@@ -88,7 +91,7 @@ namespace Sitecore.Services.Contrib.Data
 
     public void Update(T entity)
     {
-      using (new Sitecore.SecurityModel.SecurityDisabler())  // TODO use a UserSwitcher and switch to the Api User
+      using (new SecurityModel.SecurityDisabler())
       {
         var database = MasterDatabase;
         var itemToUpdate = database.GetItem(new ID(entity.Id));
@@ -142,7 +145,7 @@ namespace Sitecore.Services.Contrib.Data
 
     public void Delete(T entity)
     {
-      using (new Sitecore.SecurityModel.SecurityDisabler()) // TODO use a UserSwitcher and switch to the Api User
+      using (new SecurityModel.SecurityDisabler())
       {
         var item = MasterDatabase.GetItem(new ID(entity.Id));
         item.Delete();
@@ -164,7 +167,7 @@ namespace Sitecore.Services.Contrib.Data
 
     private static Database GetDatabase(string databaseName = "master")
     {
-      return Sitecore.Configuration.Factory.GetDatabase(databaseName);
+      return Configuration.Factory.GetDatabase(databaseName);
     }
 
     protected void UpdateItemListField(Field field, ICollection<Guid> itemIDs)
