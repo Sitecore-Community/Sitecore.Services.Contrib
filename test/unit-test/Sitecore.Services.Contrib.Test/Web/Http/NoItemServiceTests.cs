@@ -54,12 +54,6 @@ namespace Sitecore.Services.Contrib.Test.Web.Http
     }
 
     [Fact]
-    public void itemservice_query_route_not_mapped()
-    {
-      _httpConfiguration.Routes.ContainsKey(DefaultRouteMapper.RouteName.ItemService.Query).ShouldBeFalse();
-    }
-
-    [Fact]
     public void itemservice_query_via_item_route_not_mapped()
     {
       _httpConfiguration.Routes.ContainsKey(DefaultRouteMapper.RouteName.ItemService.QueryViaItem).ShouldBeFalse();
