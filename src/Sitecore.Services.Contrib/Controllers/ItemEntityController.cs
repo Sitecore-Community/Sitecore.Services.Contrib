@@ -5,7 +5,7 @@ using Sitecore.Services.Infrastructure.Sitecore.Services;
 
 namespace Sitecore.Services.Contrib.Controllers
 {
-  [ServicesController("item-entity")]
+  [ServicesController("custom/item")]
   public class ItemEntityController : EntityService<ItemEntity>
   {
     public ItemEntityController(IRepository<ItemEntity> repository)

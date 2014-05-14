@@ -1,11 +1,11 @@
 @echo Off
 
 if "%MajorVersion%" == "" (
-   set MajorVersion=0
+   set MajorVersion=1
 )
 
 if "%MinorVersion%" == "" (
-   set MinorVersion=2
+   set MinorVersion=0
 )
 
 if "%PatchVersion%" == "" (

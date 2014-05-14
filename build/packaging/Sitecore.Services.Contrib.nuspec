@@ -9,11 +9,11 @@
     <iconUrl>http://www.sitecore.net/favicon.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Sitecore Services Contrib project</description>
-    <releaseNotes>Pre-release version</releaseNotes>
+    <releaseNotes>Initial release</releaseNotes>
     <tags>Sitecore Services Contrib</tags>
     <language>en-GB</language>
     <dependencies>
-      <dependency id="Sitecore.Services" version="0.2.0.196" />
+      <dependency id="Sitecore.Services" version="1.0.0.201" />
     </dependencies>
   </metadata>
   <files>

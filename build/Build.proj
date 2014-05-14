@@ -20,7 +20,19 @@
     <LibFiles Include="Sitecore.Kernel.dll" />
     
     <!-- Indirectly referenced files -->
-    
+    <LibFiles Include="ComponentArt.Web.UI.dll" />    
+    <LibFiles Include="HtmlAgilityPack.dll" />
+    <LibFiles Include="ITHit.WebDAV.Server.dll" />
+    <LibFiles Include="Lucene.Net.dll" />
+    <LibFiles Include="Mvp.Xml.dll" />
+    <LibFiles Include="RadEditor.Net2.dll" />
+    <LibFiles Include="Sitecore.ContentSearch.dll" />
+    <LibFiles Include="Sitecore.ContentSearch.Linq.dll" />
+    <LibFiles Include="Sitecore.Logging.dll" />
+    <LibFiles Include="Sitecore.NVelocity.dll" />
+    <LibFiles Include="Sitecore.Zip.dll" />
+    <LibFiles Include="Telerik.Web.UI.dll" />
+
   </ItemGroup>
   
 </Project>
