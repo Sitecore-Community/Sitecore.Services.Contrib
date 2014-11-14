@@ -91,7 +91,6 @@
 
     <xunit
         Assemblies="@(TestAssemblies)"
-        WorkingFolder="$(XunitPath)"
         Xml="$(OutputXmlFile)"
         Html="$(OutputHtmlFile)"/>
 
