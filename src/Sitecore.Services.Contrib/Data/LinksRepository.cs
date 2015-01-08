@@ -17,12 +17,14 @@ namespace Sitecore.Services.Contrib.Data
     public IEnumerable<Item> GetLinksFor(Item item, ID templateType)
     {
       var templateItem = _database.Templates[templateType];
+
       if (templateItem == null)
       {
         return null;
       }
 
-      var links = Sitecore.Globals.LinkDatabase.GetReferrers(item);
+      var links = Globals.LinkDatabase.GetReferrers(item);
+
       if (links == null)
       {
         return null;

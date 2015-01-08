@@ -33,18 +33,18 @@ namespace Sitecore.Services.Contrib.Web.Http
     {
       config.Routes.MapHttpRoute(
           DefaultRouteMapper.RouteName.EntityService.IdAction,
-          _routeBase + "{namespace}/{controller}/{id}/{action}",
-          defaults: new { id = RouteParameter.Optional, action = "DefaultAction" }
+          _routeBase + "{namespace}/{controller}/{id}/{action}", 
+          new { id = RouteParameter.Optional, action = "DefaultAction" }
           );
     }
 
     public void MapRoutes(RouteCollection routes)
     {
       routes.MapRoute(
-          name: DefaultRouteMapper.RouteName.EntityService.MetaDataScript,
-          url: _routeBase + "script/metadata",
-          defaults: new { controller = "MetaDataScript", action = "GetScripts" },
-          namespaces: new[] { "Sitecore.Services.Infrastructure.Sitecore.Mvc" });
+          DefaultRouteMapper.RouteName.EntityService.MetaDataScript, 
+          _routeBase + "script/metadata", 
+          new { controller = "MetaDataScript", action = "GetScripts" }, 
+          new[] { "Sitecore.Services.Infrastructure.Sitecore.Mvc" });
     }
   }
 }

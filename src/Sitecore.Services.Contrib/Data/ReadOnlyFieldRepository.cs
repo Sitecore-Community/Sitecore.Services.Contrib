@@ -21,22 +21,22 @@ namespace Sitecore.Services.Contrib.Data
 
     public void Add(ItemEntity entity)
     {
-      throw new System.NotImplementedException();
+      throw new NotImplementedException();
     }
 
     public bool Exists(ItemEntity entity)
     {
-      throw new System.NotImplementedException();
+      throw new NotImplementedException();
     }
 
     public void Update(ItemEntity entity)
     {
-      throw new System.NotImplementedException();
+      throw new NotImplementedException();
     }
 
     public void Delete(ItemEntity entity)
     {
-      throw new System.NotImplementedException();
+      throw new NotImplementedException();
     }
 
     private static Database GetDatabase()
