@@ -17,13 +17,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <LibFiles Include="Sitecore.Kernel.dll" />
+      <LibFiles Include="Newtonsoft.Json.dll" />
+      <LibFiles Include="Sitecore.Kernel.dll" />
 
     <LibFiles Include="Sitecore.Services.Core.dll" />
     <LibFiles Include="Sitecore.Services.Infrastructure.dll" />
     <LibFiles Include="Sitecore.Services.Infrastructure.Sitecore.dll" />
 
-    <!-- Indirectly referenced files -->
+      <LibFiles Include="System.Net.Http.Formatting.dll" />
+      <LibFiles Include="System.Web.Http.dll" />
+      <LibFiles Include="System.Web.Mvc.dll" />
+
+      <LibFiles Include="System.Web.WebPages.dll" />
+
+
+      <!-- Indirectly referenced files -->
     <LibFiles Include="ComponentArt.Web.UI.dll" />    
     <LibFiles Include="HtmlAgilityPack.dll" />
     <LibFiles Include="ITHit.WebDAV.Server.dll" />
@@ -35,7 +43,13 @@
     <LibFiles Include="Sitecore.Logging.dll" />
     <LibFiles Include="Sitecore.NVelocity.dll" />
     <LibFiles Include="Sitecore.Zip.dll" />
-    <LibFiles Include="Telerik.Web.UI.dll" />
+
+      <LibFiles Include="System.Web.Http.Cors.dll" />
+      <LibFiles Include="System.Web.Razor.dll" />
+      <LibFiles Include="System.Web.WebPages.Razor.dll" />
+
+      <LibFiles Include="System.Web.Http.WebHost.dll" />
+      <LibFiles Include="Telerik.Web.UI.dll" />
 
   </ItemGroup>
   
