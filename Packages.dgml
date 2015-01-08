@@ -1,65 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="test\unit-test\Sitecore.Services.Contrib.Test" Label="Sitecore.Services.Contrib.Test" Category="Project" />
-    <Node Id="Microsoft.AspNet.Mvc 5.1.0" Label="Microsoft.AspNet.Mvc 5.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.Razor 3.1.0" Label="Microsoft.AspNet.Razor 3.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.WebApi 5.1.0" Label="Microsoft.AspNet.WebApi 5.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.WebApi.Client 5.1.0" Label="Microsoft.AspNet.WebApi.Client 5.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.WebApi.Core 5.1.0" Label="Microsoft.AspNet.WebApi.Core 5.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.WebApi.WebHost 5.1.0" Label="Microsoft.AspNet.WebApi.WebHost 5.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.WebPages 3.1.0" Label="Microsoft.AspNet.WebPages 3.1.0" Category="Package" />
-    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
-    <Node Id="Moq 4.2.1312.1622" Label="Moq 4.2.1312.1622" Category="Package" />
-    <Node Id="Newtonsoft.Json 4.5.11" Label="Newtonsoft.Json 4.5.11" Category="Package" />
-    <Node Id="Should 1.1.20" Label="Should 1.1.20" Category="Package" />
-    <Node Id="Sitecore.Services 0.2.0.148" Label="Sitecore.Services 0.2.0.148" Category="Package" />
-    <Node Id="xunit 1.9.2" Label="xunit 1.9.2" Category="Package" />
-    <Node Id="src\Sitecore.Services.Contrib" Label="Sitecore.Services.Contrib" Category="Project" />
-    <Node Id="Microsoft.AspNet.Mvc 5.1.0" Label="Microsoft.AspNet.Mvc 5.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.Razor 3.1.0" Label="Microsoft.AspNet.Razor 3.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.WebApi 5.1.0" Label="Microsoft.AspNet.WebApi 5.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.WebApi.Client 5.1.0" Label="Microsoft.AspNet.WebApi.Client 5.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.WebApi.Core 5.1.0" Label="Microsoft.AspNet.WebApi.Core 5.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.WebApi.WebHost 5.1.0" Label="Microsoft.AspNet.WebApi.WebHost 5.1.0" Category="Package" />
-    <Node Id="Microsoft.AspNet.WebPages 3.1.0" Label="Microsoft.AspNet.WebPages 3.1.0" Category="Package" />
-    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
-    <Node Id="Newtonsoft.Json 4.5.11" Label="Newtonsoft.Json 4.5.11" Category="Package" />
-    <Node Id="Sitecore.Services 0.2.0.148" Label="Sitecore.Services 0.2.0.148" Category="Package" />
+    <Node Id="Moq 4.2.1409.1722" Category="Package" Bounds="0,59.95,145.83,29.95" Label="Moq 4.2.1409.1722" />
+    <Node Id="Should 1.1.20" Category="Package" Bounds="176.33,59.95,109.17,29.95" Label="Should 1.1.20" />
+    <Node Id="test\unit-test\Sitecore.Services.Contrib.Test" Category="Project" Bounds="124.656666666667,0,212.516666666667,29.95" Label="Sitecore.Services.Contrib.Test" />
+    <Node Id="xunit 1.9.2" Category="Package" Bounds="352.186666666667,119.9,87.4566666666666,29.95" Label="xunit 1.9.2" />
+    <Node Id="xunit.extensions 1.9.2" Category="Package" Bounds="315.668333333333,59.95,160.493333333333,29.95" Label="xunit.extensions 1.9.2" />
   </Nodes>
   <Links>
-    <Link Source="Microsoft.AspNet.Mvc 5.1.0" Target="Microsoft.AspNet.WebPages 3.1.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.Mvc 5.1.0" Target="Microsoft.AspNet.Razor 3.1.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi 5.1.0" Target="Microsoft.AspNet.WebApi.WebHost 5.1.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi.Client 5.1.0" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi.Client 5.1.0" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi.Core 5.1.0" Target="Microsoft.AspNet.WebApi.Client 5.1.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi.WebHost 5.1.0" Target="Microsoft.AspNet.WebApi.Core 5.1.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebPages 3.1.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebPages 3.1.0" Target="Microsoft.AspNet.Razor 3.1.0" Category="Package Dependency" />
-    <Link Source="Sitecore.Services 0.2.0.148" Target="Microsoft.AspNet.Mvc 5.1.0" Category="Package Dependency" />
-    <Link Source="Sitecore.Services 0.2.0.148" Target="Microsoft.AspNet.WebApi 5.1.0" Category="Package Dependency" />
-    <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="Moq 4.2.1312.1622" Category="Installed Package" />
-    <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="Should 1.1.20" Category="Installed Package" />
-    <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="Sitecore.Services 0.2.0.148" Category="Installed Package" />
-    <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="xunit 1.9.2" Category="Installed Package" />
-    <Link Source="Microsoft.AspNet.Mvc 5.1.0" Target="Microsoft.AspNet.WebPages 3.1.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.Mvc 5.1.0" Target="Microsoft.AspNet.Razor 3.1.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi 5.1.0" Target="Microsoft.AspNet.WebApi.WebHost 5.1.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi.Client 5.1.0" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi.Client 5.1.0" Target="Newtonsoft.Json 4.5.11" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi.Core 5.1.0" Target="Microsoft.AspNet.WebApi.Client 5.1.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebApi.WebHost 5.1.0" Target="Microsoft.AspNet.WebApi.Core 5.1.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebPages 3.1.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
-    <Link Source="Microsoft.AspNet.WebPages 3.1.0" Target="Microsoft.AspNet.Razor 3.1.0" Category="Package Dependency" />
-    <Link Source="Sitecore.Services 0.2.0.148" Target="Microsoft.AspNet.Mvc 5.1.0" Category="Package Dependency" />
-    <Link Source="Sitecore.Services 0.2.0.148" Target="Microsoft.AspNet.WebApi 5.1.0" Category="Package Dependency" />
-    <Link Source="src\Sitecore.Services.Contrib" Target="Sitecore.Services 0.2.0.148" Category="Installed Package" />
+    <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="Moq 4.2.1409.1722" Category="Installed Package" Bounds="120.796699523926,29.9500007629395,70.651237487793,26.8072280883789" />
+    <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="Should 1.1.20" Category="Installed Package" Bounds="230.914993286133,29.9500007629395,0,21" />
+    <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="xunit.extensions 1.9.2" Category="Installed Package" Bounds="272.130584716797,29.9500007629395,74.10986328125,26.9265747070313" />
+    <Link Source="xunit.extensions 1.9.2" Target="xunit 1.9.2" Category="Package Dependency" Bounds="395.915008544922,89.9000015258789,0,21" />
   </Links>
   <Categories>
-    <Category Id="Project" />
+    <Category Id="Installed Package" />
     <Category Id="Package" />
+    <Category Id="Package Dependency" />
+    <Category Id="Project" />
   </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
   <Styles>
     <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
       <Condition Expression="HasCategory('Project')" />

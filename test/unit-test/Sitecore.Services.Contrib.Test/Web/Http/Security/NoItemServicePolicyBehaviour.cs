@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System;
+using System.Web.Http;
 using System.Web.Http.Controllers;
 
 using Sitecore.Services.Contrib.Web.Http.Security;
@@ -10,86 +11,69 @@ using Sitecore.Services.Infrastructure.Web.Http.Security;
 using Moq;
 using Should;
 using Xunit;
+using Xunit.Extensions;
 
 namespace Sitecore.Services.Contrib.Test.Web.Http.Security
 {
-  public class NoItemServicePolicyBehaviour
-  {
-    private readonly NoItemServicePolicy _policy;
-
-    public NoItemServicePolicyBehaviour()
+    public class NoItemServicePolicyBehaviour
     {
-      _policy = new NoItemServicePolicy();
-    }
+        private readonly NoItemServicePolicy _policy;
 
-    [Fact]
-    public void implements_IAuthorizePolicy()
-    {
-      typeof(IAuthorizePolicy).IsAssignableFrom(typeof(NoItemServicePolicy)).ShouldBeTrue();
-    }
-
-    [Fact]
-    public void allows_api_controller()
-    {
-      var controller = new ExampleApiController();
-      var httpActionContext = CreateActionContextForController(controller);
-
-      var isAuthorised = _policy.IsAuthorised(httpActionContext);
-
-      isAuthorised.ShouldBeTrue();
-    }
-
-    [Fact]
-    public void disallows_itemservice_controller()
-    {
-      var controller = new Infrastructure.Sitecore.Controllers.ItemServiceController();
-      var httpActionContext = CreateActionContextForController(controller);
-
-      var isAuthorised = _policy.IsAuthorised(httpActionContext);
-
-      isAuthorised.ShouldBeFalse();
-    }
-
-    [Fact]
-    public void allows_an_entityservice_controller()
-    {
-      var repos = new Mock<IRepository<BusinessObject>>();
-      var controller = new ExampleEntityService(repos.Object);
-
-      var httpActionContext = CreateActionContextForController(controller);
-
-      var isAuthorised = _policy.IsAuthorised(httpActionContext);
-
-      isAuthorised.ShouldBeTrue();
-    }
-
-    private static HttpActionContext CreateActionContextForController(IHttpController controller)
-    {
-      var httpActionContext = new HttpActionContext
-      {
-        ControllerContext = new HttpControllerContext
+        public NoItemServicePolicyBehaviour()
         {
-          Controller = controller
+            _policy = new NoItemServicePolicy();
         }
-      };
 
-      return httpActionContext;
+        [Fact]
+        public void implements_IAuthorizePolicy()
+        {
+            typeof(IAuthorizePolicy).IsAssignableFrom(typeof(NoItemServicePolicy)).ShouldBeTrue();
+        }
+
+        [Theory]
+        [InlineData(typeof(ExampleApiController), true)]
+        [InlineData(typeof(Infrastructure.Sitecore.Controllers.ItemServiceController), false)]
+        [InlineData(typeof(ExampleEntityService), true)]
+        public void verify_allowed_api_controller_types(Type controllerType, bool isAuthorised)
+        {
+            var controller = (IHttpController) Activator.CreateInstance(controllerType);
+            var httpActionContext = CreateActionContextForController(controller);
+
+            _policy.IsAuthorised(httpActionContext)
+                   .ShouldEqual(isAuthorised);
+        }
+
+        private static HttpActionContext CreateActionContextForController(IHttpController controller)
+        {
+            var httpActionContext = new HttpActionContext
+            {
+                ControllerContext = new HttpControllerContext
+                {
+                    Controller = controller
+                }
+            };
+
+            return httpActionContext;
+        }
     }
-  }
 
-  internal class ExampleApiController : ApiController
-  {
-  }
-
-  internal class ExampleEntityService : EntityService<BusinessObject>
-  {
-    public ExampleEntityService(IRepository<BusinessObject> repository)
-      : base(repository)
+    internal class ExampleApiController : ApiController
     {
     }
-  }
 
-  public class BusinessObject : EntityIdentity
-  {
-  }
+    internal class ExampleEntityService : EntityService<BusinessObject>
+    {
+        public ExampleEntityService(IRepository<BusinessObject> repository)
+            : base(repository)
+        {
+        }
+
+        public ExampleEntityService() : this(new Mock<IRepository<BusinessObject>>().Object)
+        {
+        }
+    }
+
+    public class BusinessObject : EntityIdentity
+    {
+    }
 }
