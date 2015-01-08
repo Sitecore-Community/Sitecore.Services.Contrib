@@ -12,14 +12,11 @@
     <releaseNotes>Initial release</releaseNotes>
     <tags>Sitecore Services Contrib</tags>
     <language>en-GB</language>
-    <dependencies>
-      <dependency id="Sitecore.Services" version="1.0.0.201" />
-    </dependencies>
+    <dependencies />
   </metadata>
   <files>
     <!-- NET 4.5 -->
     <file src="..\..\artifacts\Build\lib\net45\Sitecore.Services.Contrib.dll" target="lib\net45" />
-    <file src="..\..\artifacts\Build\lib\net45\Sitecore.Services.Contrib.pdb" target="lib\net45" />
 
     <file src="..\..\src\Sitecore.Services.Contrib\content\**\*" target="content" />    
   </files>

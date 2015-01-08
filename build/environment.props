@@ -7,8 +7,8 @@
 
      -->    
 
-    <TestWebsitePath  Condition="$(TestWebsitePath) == ''">C:\Websites\sc71\Website</TestWebsitePath>
-    <TestWebsiteUrl Condition="$(TestWebsiteUrl) == ''">http://sc71</TestWebsiteUrl>
-    <LibsSrcPath Condition="$(LibsSrcPath) == ''">C:\LibsSrc\7\7.1\130926</LibsSrcPath>
+    <TestWebsitePath  Condition="$(TestWebsitePath) == ''">C:\Websites\sc75\Website</TestWebsitePath>
+    <TestWebsiteUrl Condition="$(TestWebsiteUrl) == ''">http://sc75</TestWebsiteUrl>
+    <LibsSrcPath Condition="$(LibsSrcPath) == ''">C:\LibsSrc\7\7.5\141003</LibsSrcPath>
   </PropertyGroup>
 </Project>

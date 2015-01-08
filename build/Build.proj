@@ -13,12 +13,16 @@
 
   <!-- Provide defaults for values for environment properties if environment.props is not present -->
   <PropertyGroup>
-    <LibsSrcPath Condition="$(LibsSrcPath) == ''">C:\LibsSrc\7\7.1\130926</LibsSrcPath>
+    <LibsSrcPath Condition="$(LibsSrcPath) == ''">C:\LibsSrc\7\7.5\141003</LibsSrcPath>
   </PropertyGroup>
 
   <ItemGroup>
     <LibFiles Include="Sitecore.Kernel.dll" />
-    
+
+    <LibFiles Include="Sitecore.Services.Core.dll" />
+    <LibFiles Include="Sitecore.Services.Infrastructure.dll" />
+    <LibFiles Include="Sitecore.Services.Infrastructure.Sitecore.dll" />
+
     <!-- Indirectly referenced files -->
     <LibFiles Include="ComponentArt.Web.UI.dll" />    
     <LibFiles Include="HtmlAgilityPack.dll" />
