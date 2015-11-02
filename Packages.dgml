@@ -2,7 +2,16 @@
 <DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
     <Node Id="test\unit-test\Sitecore.Services.Contrib.Test" Label="Sitecore.Services.Contrib.Test" Category="Project" />
+    <Node Id="Microsoft.AspNet.Mvc 5.2.3" Label="Microsoft.AspNet.Mvc 5.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 3.2.3" Label="Microsoft.AspNet.Razor 3.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi 5.2.3" Label="Microsoft.AspNet.WebApi 5.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 5.2.3" Label="Microsoft.AspNet.WebApi.Client 5.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 5.2.3" Label="Microsoft.AspNet.WebApi.Core 5.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 5.2.3" Label="Microsoft.AspNet.WebApi.WebHost 5.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 3.2.3" Label="Microsoft.AspNet.WebPages 3.2.3" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
     <Node Id="Moq 4.2.1510.2205" Label="Moq 4.2.1510.2205" Category="Package" />
+    <Node Id="Newtonsoft.Json 6.0.4" Label="Newtonsoft.Json 6.0.4" Category="Package" />
     <Node Id="Should 1.1.20" Label="Should 1.1.20" Category="Package" />
     <Node Id="xunit 2.1.0" Label="xunit 2.1.0" Category="Package" />
     <Node Id="xunit.abstractions 2.0.0" Label="xunit.abstractions 2.0.0" Category="Package" />
@@ -26,6 +35,15 @@
     <Node Id="Newtonsoft.Json 6.0.4" Label="Newtonsoft.Json 6.0.4" Category="Package" />
   </Nodes>
   <Links>
+    <Link Source="Microsoft.AspNet.Mvc 5.2.3" Target="Microsoft.AspNet.WebPages 3.2.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 5.2.3" Target="Microsoft.AspNet.Razor 3.2.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi 5.2.3" Target="Microsoft.AspNet.WebApi.WebHost 5.2.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.2.3" Target="Newtonsoft.Json 6.0.4" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.2.3" Target="Newtonsoft.Json 6.0.4" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 5.2.3" Target="Microsoft.AspNet.WebApi.Client 5.2.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 5.2.3" Target="Microsoft.AspNet.WebApi.Core 5.2.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.2.3" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.2.3" Target="Microsoft.AspNet.Razor 3.2.3" Category="Package Dependency" />
     <Link Source="xunit 2.1.0" Target="xunit.core 2.1.0" Category="Package Dependency" />
     <Link Source="xunit 2.1.0" Target="xunit.assert 2.1.0" Category="Package Dependency" />
     <Link Source="xunit.core 2.1.0" Target="xunit.extensibility.core 2.1.0" Category="Package Dependency" />
@@ -60,6 +78,8 @@
     <Link Source="xunit.extensibility.execution 2.1.0" Target="xunit.extensibility.core 2.1.0" Category="Package Dependency" />
     <Link Source="xunit.extensibility.execution 2.1.0" Target="xunit.extensibility.core 2.1.0" Category="Package Dependency" />
     <Link Source="xunit.extensibility.execution 2.1.0" Target="xunit.extensibility.core 2.1.0" Category="Package Dependency" />
+    <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="Microsoft.AspNet.Mvc 5.2.3" Category="Installed Package" />
+    <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="Microsoft.AspNet.WebApi 5.2.3" Category="Installed Package" />
     <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="Moq 4.2.1510.2205" Category="Installed Package" />
     <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="Should 1.1.20" Category="Installed Package" />
     <Link Source="test\unit-test\Sitecore.Services.Contrib.Test" Target="xunit 2.1.0" Category="Installed Package" />
