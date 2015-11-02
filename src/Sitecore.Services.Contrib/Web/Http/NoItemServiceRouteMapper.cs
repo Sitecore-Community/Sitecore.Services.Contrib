@@ -1,13 +1,14 @@
 ﻿using System.Web.Http;
-using System.Web.Mvc;
-using System.Web.Routing;
 
 using Sitecore.Services.Infrastructure.Sitecore.Configuration;
 using Sitecore.Services.Infrastructure.Web.Http;
 
 namespace Sitecore.Services.Contrib.Web.Http
 {
-  public class NoItemServiceRouteMapper : IMapRoutes
+    using System.Web.Mvc;
+    using System.Web.Routing;
+
+    public class NoItemServiceRouteMapper : IMapRoutes
   {
     private readonly string _routeBase;
 

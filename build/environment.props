@@ -7,8 +7,8 @@
 
      -->    
 
-    <TestWebsitePath  Condition="$(TestWebsitePath) == ''">C:\Websites\sc75\Website</TestWebsitePath>
-    <TestWebsiteUrl Condition="$(TestWebsiteUrl) == ''">http://sc75</TestWebsiteUrl>
-    <LibsSrcPath Condition="$(LibsSrcPath) == ''">C:\LibsSrc\7\7.5\141003</LibsSrcPath>
+    <TestWebsitePath  Condition="$(TestWebsitePath) == ''">C:\Websites\ssc.intg\Website</TestWebsitePath>
+    <TestWebsiteUrl Condition="$(TestWebsiteUrl) == ''">http://ssc.intg</TestWebsiteUrl>
+    <LibsSrcPath Condition="$(LibsSrcPath) == ''">C:\BFResources\Sitecore 8.1 rev. 151003\Website\bin</LibsSrcPath>
   </PropertyGroup>
 </Project>

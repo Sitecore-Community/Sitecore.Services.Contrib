@@ -13,7 +13,7 @@
 
   <!-- Provide defaults for values for environment properties if environment.props is not present -->
   <PropertyGroup>
-    <LibsSrcPath Condition="$(LibsSrcPath) == ''">C:\LibsSrc\7\7.5\141003</LibsSrcPath>
+    <LibsSrcPath Condition="$(LibsSrcPath) == ''">C:\BFResources\Sitecore 8.1 rev. 151003\Website\bin</LibsSrcPath>
   </PropertyGroup>
 
   <ItemGroup>
