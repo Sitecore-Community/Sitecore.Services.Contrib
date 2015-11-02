@@ -5,7 +5,7 @@
   <Import Project="$(MSBuildProjectDirectory)\build.tasks" />
 
   <UsingTask
-    AssemblyFile="$(XunitPath)\xunit.runner.msbuild.dll"
+    AssemblyFile="$(XunitExePath)"
     TaskName="Xunit.Runner.MSBuild.xunit"/>
   
   <Target Name="CopyLibs">

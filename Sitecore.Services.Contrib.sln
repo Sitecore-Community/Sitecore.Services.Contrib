@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1BDAE08E-470A-4725-8D8C-5F25ACB188AB}"
 EndProject
@@ -33,7 +33,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{508F6B
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C615B871-ACFB-4182-A62D-38DFC5F273EE}"
@@ -53,6 +52,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Services.Contrib",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Services.Contrib.Test", "test\unit-test\Sitecore.Services.Contrib.Test\Sitecore.Services.Contrib.Test.csproj", "{0446F61E-2100-4D49-A999-7F6D5BE1EE73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build", "src\Build\Build.csproj", "{25E7A6D2-099F-4871-A70D-DEF235C560AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +68,10 @@ Global
 		{0446F61E-2100-4D49-A999-7F6D5BE1EE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0446F61E-2100-4D49-A999-7F6D5BE1EE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0446F61E-2100-4D49-A999-7F6D5BE1EE73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25E7A6D2-099F-4871-A70D-DEF235C560AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E7A6D2-099F-4871-A70D-DEF235C560AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E7A6D2-099F-4871-A70D-DEF235C560AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E7A6D2-099F-4871-A70D-DEF235C560AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,5 +82,6 @@ Global
 		{C615B871-ACFB-4182-A62D-38DFC5F273EE} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
 		{3E4C7858-9125-4E8C-9492-1B30CCA0F861} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
 		{0446F61E-2100-4D49-A999-7F6D5BE1EE73} = {AF5DE799-FC6E-4F87-AD4B-34E727AE0FBC}
+		{25E7A6D2-099F-4871-A70D-DEF235C560AC} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
 	EndGlobalSection
 EndGlobal

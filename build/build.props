@@ -11,12 +11,12 @@
     <BuildResultsPath>$(ArtifactsPath)\Build</BuildResultsPath>
     <TestResultsPath>$(ArtifactsPath)\TestResults</TestResultsPath>
     <PackageResultsPath>$(ArtifactsPath)\Packages</PackageResultsPath>
-    <NuGetToolsPath>$(ProjectRoot)\.nuget</NuGetToolsPath>
-    <NuGetExePath>$(NuGetToolsPath)\nuget.exe</NuGetExePath>
     <OutputHtmlFile>$(TestResultsPath)\TestResults.html</OutputHtmlFile>
     <OutputXmlFile>$(TestResultsPath)\TestResults.xml</OutputXmlFile>
+    <PackagesPath>$(ProjectRoot)\packages</PackagesPath>
     <ToolsPath>$(ProjectRoot)\tools</ToolsPath>
-    <XunitPath>$(ProjectRoot)\packages\xunit.1.9.2\lib\net20</XunitPath>
+    <NuGetExePath>$(PackagesPath)\NuGet.CommandLine.2.8.6\tools\NuGet.exe</NuGetExePath>
+    <XunitExePath>$(PackagesPath)\xunit.runner.msbuild.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.runner.msbuild.dll</XunitExePath>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -24,8 +24,8 @@
     <BuildDate>$([System.DateTime]::Now.ToString("yyMMdd"))</BuildDate>
     <PrereleaseTagWithSeparator Condition="$(PRERELEASE) != ''">.$(BuildDate)</PrereleaseTagWithSeparator>
     <Version>$(MajorVersion).$(MinorVersion).$(PatchVersion)</Version>
-    <FileVersion>$(MajorVersion).$(MinorVersion).$(Revision).$(PatchVersion)</FileVersion>
-    <ProductVersion>$(MajorVersion).$(MinorVersion) rev $(BuildDate)</ProductVersion>
+    <FileVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(Revision)</FileVersion>
+    <ProductVersion>$(MajorVersion).$(MinorVersion) rev. $(BuildDate)</ProductVersion>
     <PackageVersion Condition="$(PackageVersion) == ''">$(MajorVersion).$(MinorVersion).$(PatchVersion).$(Revision)$(PrereleaseTagWithSeparator)</PackageVersion>
   </PropertyGroup>
 

@@ -2,10 +2,11 @@ using System.Web.Http;
 using System.Web.Routing;
 using Should;
 using Sitecore.Services.Infrastructure.Web.Http;
-using Xunit.Extensions;
 
 namespace Sitecore.Services.Contrib.Test.Web.Http
 {
+    using Xunit;
+
     public class NoItemServiceRouteMapperHttpConfigurationBehaviour : NoItemServiceTest
     {
         private readonly HttpConfiguration _httpConfiguration;
