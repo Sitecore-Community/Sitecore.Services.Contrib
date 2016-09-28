@@ -18,18 +18,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C615B8
 		src\Common\CommonVersionInfo.cs = src\Common\CommonVersionInfo.cs
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{4E8C7940-7A7A-48A2-85B4-A24D19A0AD63}"
-	ProjectSection(SolutionItems) = preProject
-		doc\index.md = doc\index.md
-		doc\setup.md = doc\setup.md
-		doc\who.md = doc\who.md
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Services.Contrib", "src\Sitecore.Services.Contrib\Sitecore.Services.Contrib.csproj", "{3E4C7858-9125-4E8C-9492-1B30CCA0F861}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25E7A6D2-099F-4871-A70D-DEF235C560AC} = {25E7A6D2-099F-4871-A70D-DEF235C560AC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Services.Contrib.Test", "test\unit-test\Sitecore.Services.Contrib.Test\Sitecore.Services.Contrib.Test.csproj", "{0446F61E-2100-4D49-A999-7F6D5BE1EE73}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build", "src\Build\Build.csproj", "{25E7A6D2-099F-4871-A70D-DEF235C560AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "src\Documentation\Documentation.csproj", "{CEBE9092-AEEA-4F7F-A7CA-03A8BA405970}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25E7A6D2-099F-4871-A70D-DEF235C560AC} = {25E7A6D2-099F-4871-A70D-DEF235C560AC}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +50,10 @@ Global
 		{25E7A6D2-099F-4871-A70D-DEF235C560AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25E7A6D2-099F-4871-A70D-DEF235C560AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25E7A6D2-099F-4871-A70D-DEF235C560AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBE9092-AEEA-4F7F-A7CA-03A8BA405970}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBE9092-AEEA-4F7F-A7CA-03A8BA405970}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{CEBE9092-AEEA-4F7F-A7CA-03A8BA405970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBE9092-AEEA-4F7F-A7CA-03A8BA405970}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +64,6 @@ Global
 		{3E4C7858-9125-4E8C-9492-1B30CCA0F861} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
 		{0446F61E-2100-4D49-A999-7F6D5BE1EE73} = {AF5DE799-FC6E-4F87-AD4B-34E727AE0FBC}
 		{25E7A6D2-099F-4871-A70D-DEF235C560AC} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
+		{CEBE9092-AEEA-4F7F-A7CA-03A8BA405970} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
 	EndGlobalSection
 EndGlobal

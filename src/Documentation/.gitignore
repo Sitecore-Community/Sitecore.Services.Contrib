@@ -1,0 +1,22 @@
+###############
+#    folder   #
+###############
+/DROP/
+/TEMP/
+/**/packages/
+/**/bin/
+/**/csx/
+/**/obj/
+/**/node_modules/
+
+###############
+#  temp file  #
+###############
+*.nupkg
+*.log
+*.tmp
+*.vsprops
+*.suo
+*.ccproj.user
+*.csproj.user
+.gitattributes

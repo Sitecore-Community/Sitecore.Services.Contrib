@@ -39,3 +39,9 @@ TestResults
 # Build ignores
 /msbuild.log
 /artifacts
+*.map
+src/Documentation/styles/
+src/Documentation/template/
+src/Documentation/favicon.ico
+src/Documentation/index.html
+src/Documentation/logo.png
