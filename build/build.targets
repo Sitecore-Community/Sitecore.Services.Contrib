@@ -11,7 +11,7 @@
     <Import Project="$(MSBuildProjectDirectory)\build.tasks" />
 
 		<UsingTask AssemblyFile="$(XunitExePath)"
-    TaskName="Xunit.Runner.MSBuild.xunit"/>
+               TaskName="Xunit.Runner.MSBuild.xunit"/>
   
     <Target Name="Clean"
             BeforeTargets="Init">
@@ -70,7 +70,7 @@
 						<FxCopOptions>/summary /successfile /searchgac</FxCopOptions>
 						<FxCopReportFormat>$(FxCopDir)\Xml\FxCopReport.xsl</FxCopReportFormat>
 						<FxCopAnalysisLogFile>$(AnalysisResultsPath)\FxCopReport.html</FxCopAnalysisLogFile>
-						<AssemblyFiles>$(BuildDestinationDir)\Sitecore.Services*.dll</AssemblyFiles>
+						<AssemblyFiles>$(BuildDestinationDir)\$(ProjectName).dll</AssemblyFiles>
 				</PropertyGroup>
 
 				<Message Text="FxCopDir is $(FxCopDir)" />

@@ -12,23 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9DFCD64B-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit-test", "unit-test", "{AF5DE799-FC6E-4F87-AD4B-34E727AE0FBC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{66D8BECE-FEBF-4464-B213-47E6C25F4AE9}"
-	ProjectSection(SolutionItems) = preProject
-		build.cmd = build.cmd
-		build\Build.proj = build\Build.proj
-		build\build.props = build\build.props
-		build\build.targets = build\build.targets
-		build\Build.tasks = build\Build.tasks
-		build\environment.props = build\environment.props
-		packages\repositories.config = packages\repositories.config
-		build\versions.targets = build\versions.targets
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packaging", "packaging", "{F3499A3A-5856-4C9B-AF3C-625941CAE934}"
-	ProjectSection(SolutionItems) = preProject
-		build\packaging\Sitecore.Services.Contrib.nuspec = build\packaging\Sitecore.Services.Contrib.nuspec
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C615B871-ACFB-4182-A62D-38DFC5F273EE}"
 	ProjectSection(SolutionItems) = preProject
 		src\Common\CommonAssemblyInfo.cs = src\Common\CommonAssemblyInfo.cs
@@ -72,7 +55,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AF5DE799-FC6E-4F87-AD4B-34E727AE0FBC} = {9DFCD64B-BB6C-4721-B5AC-2FA0D3B992E4}
-		{F3499A3A-5856-4C9B-AF3C-625941CAE934} = {66D8BECE-FEBF-4464-B213-47E6C25F4AE9}
 		{C615B871-ACFB-4182-A62D-38DFC5F273EE} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
 		{3E4C7858-9125-4E8C-9492-1B30CCA0F861} = {1BDAE08E-470A-4725-8D8C-5F25ACB188AB}
 		{0446F61E-2100-4D49-A999-7F6D5BE1EE73} = {AF5DE799-FC6E-4F87-AD4B-34E727AE0FBC}

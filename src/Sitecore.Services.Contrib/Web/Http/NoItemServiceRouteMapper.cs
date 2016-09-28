@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Web.Http;
-
-using Sitecore.Services.Infrastructure.Sitecore.Configuration;
 using Sitecore.Services.Infrastructure.Web.Http;
-
-using Microsoft.Extensions.DependencyInjection;
 using Sitecore.Services.Core.Configuration;
 
 namespace Sitecore.Services.Contrib.Web.Http
