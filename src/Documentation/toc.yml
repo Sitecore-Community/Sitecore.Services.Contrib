@@ -1,0 +1,8 @@
+﻿- name: Home
+  href: doc/README.md
+- name: Contents
+  href: doc/contents.md
+- name: Project Setup
+  href: doc/setup.md
+#- name: Api Documentation
+#  href: xdoc.api

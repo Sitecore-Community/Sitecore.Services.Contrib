@@ -6,6 +6,7 @@ obj
 Thumbs.db
 
 #Ignore files build by Visual Studio
+.vs/
 *.user
 *.aps
 *.pch
@@ -26,9 +27,6 @@ obj/
 _ReSharper*/
 TestResults
 
-#Project specific ignores
-lib/*.dll
-lib/*.pdb
 # Ignore NuGet Packages
 *.nupkg
 # Ignore the packages folder
@@ -40,10 +38,10 @@ lib/*.pdb
 
 # Build ignores
 /msbuild.log
-
-
 /artifacts
-# NCrunch files
-*.ncrunchsolution
-*.ncrunchproject
-*nCrunch*
+*.map
+src/Documentation/styles/
+src/Documentation/template/
+src/Documentation/favicon.ico
+src/Documentation/index.html
+src/Documentation/logo.png

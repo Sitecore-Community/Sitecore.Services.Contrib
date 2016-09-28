@@ -1,27 +1,32 @@
 @echo Off
+cd %~dp0
 
-if "%MajorVersion%" == "" (
-   set MajorVersion=1
-)
-
-if "%MinorVersion%" == "" (
-   set MinorVersion=0
-)
-
-if "%PatchVersion%" == "" (
-   set PatchVersion=0
-)
-
-if "%Revision%" == "" (
-   set Revision=0
-)
+SETLOCAL
 
 set target=%1
 if "%target%" == "" (
-   set target=Go
+   set target=Full
 )
 set config=%2
 if "%config%" == "" (
    set config=Debug
 )
-%WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild Build\Build.proj /t:"%target%" /p:Configuration="%config%" /fl /flp:LogFile=msbuild.log;Verbosity=Detailed /nr:false
+
+REM Set SHA from latest GIT commit if not already defined by build process
+set ShaFile=sha.txt
+
+if "%SHA%" == "" (
+   git rev-parse HEAD > %ShaFile%
+   for /f "delims=" %%a in (%ShaFile%) do set SHA=%%a
+)
+
+nuget restore src\Build\packages.config -PackagesDirectory packages -ConfigFile src\build\nuget\NuGet.Config
+
+msbuild Build\Build.proj /t:"%target%" /p:Configuration="%config%" /fl /flp:LogFile=msbuild.log;Verbosity=Detailed /nr:false
+
+REM Remove SHA file
+if EXIST %ShaFile% del /F %ShaFile%
+if EXIST %ShaFile% exit 1
+
+REM Abandon versioning changes made by the command line build process
+git checkout src\Common\CommonVersionInfo.cs
