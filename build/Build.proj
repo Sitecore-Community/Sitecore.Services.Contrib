@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Go" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Go" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
     <ProjectName>Sitecore.Services.Contrib</ProjectName>
   </PropertyGroup>
   
-  <Import Project="$(MSBuildProjectDirectory)\versions.targets" />
   <Import Project="$(MSBuildProjectDirectory)\build.targets" />
 
-  <!-- Read in environment properties from environment.props if present -->
-  <Import Project="$(MSBuildProjectDirectory)\environment.props" Condition="Exists('$(MSBuildProjectDirectory)\environment.props')" />
  
 </Project>
