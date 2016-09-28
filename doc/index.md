@@ -1,13 +1,12 @@
-#Sitecore.Services.Contrib
+# Sitecore.Services.Contrib
 
 Welcome to the Sitecore Services Contrib project.
 
-##Contains
+## Contains
 
 * Support for additional validation attributes
 
   * EmailAddress
-
 
 * Generic base class for storing items in Sitecore. See Sitecore.Services.Contrib.Data.SitecoreItemRepository class.
 
@@ -15,6 +14,8 @@ Welcome to the Sitecore Services Contrib project.
 
 * Custom security policy to disallow HTTP requests to the Item Service.
 
-##Collaborate
+## Collaborate
 
-Anyone can collaborate to the Sitecore Services Contrib project, in order to do so, please read [how we are setup](setup.md) and [who is in charge](who.md).
+Anyone can collaborate to the Sitecore Services Contrib project. In order to do so, please read the [how we are setup](setup.md). 
+
+Previous [contributors](who.md) are duly honoured.

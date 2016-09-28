@@ -10,34 +10,5 @@
 
   <!-- Read in environment properties from environment.props if present -->
   <Import Project="$(MSBuildProjectDirectory)\environment.props" Condition="Exists('$(MSBuildProjectDirectory)\environment.props')" />
-
-  <!-- Provide defaults for values for environment properties if environment.props is not present -->
-  <PropertyGroup>
-    <LibsSrcPath Condition="$(LibsSrcPath) == ''">C:\BFResources\Sitecore 8.1 rev. 151003\Website\bin</LibsSrcPath>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <LibFiles Include="Sitecore.Kernel.dll" />
-
-    <LibFiles Include="Sitecore.Services.Core.dll" />
-    <LibFiles Include="Sitecore.Services.Infrastructure.dll" />
-    <LibFiles Include="Sitecore.Services.Infrastructure.Sitecore.dll" />
-
-    <!-- Indirectly referenced files -->
-    <LibFiles Include="ComponentArt.Web.UI.dll" />    
-    <LibFiles Include="HtmlAgilityPack.dll" />
-    <LibFiles Include="ITHit.WebDAV.Server.dll" />
-    <LibFiles Include="Lucene.Net.dll" />
-    <LibFiles Include="Mvp.Xml.dll" />
-    <LibFiles Include="RadEditor.Net2.dll" />
-    <LibFiles Include="Sitecore.ContentSearch.dll" />
-    <LibFiles Include="Sitecore.ContentSearch.Linq.dll" />
-    <LibFiles Include="Sitecore.Logging.dll" />
-    <LibFiles Include="Sitecore.NVelocity.dll" />
-    <LibFiles Include="Sitecore.Zip.dll" />
-
-    <LibFiles Include="Telerik.Web.UI.dll" />
-
-  </ItemGroup>
-  
+ 
 </Project>

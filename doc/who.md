@@ -1,6 +1,6 @@
-#The Team behind Sitecore Services Web API
+# Repository Contributors
 
-    Product Manager: 	Kerry Bellerose (KB)
-    Architect: 			Pierre Derval (PDE) / Kevin Obee (KEO)
-    Developers:
+    Pierre Derval - @dervalp
+	Kevin Obee - @kevinobee
+	Kern Herskind Nightingale - @herskinduk
 
